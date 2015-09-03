@@ -1,16 +1,5 @@
 #!/bin/bash
 
-#Variables
-MYSQL_ROOT_PASSWORD='changerootpassword'
-MYSQL_APP_DB_PASSWORD='changeuserpassword'
-MYSQL_APP_DB_USERNAME='redmine_admin'
-MYSQL_APP_DB_NAME='redmine_db'
-SSH_ROOTPASS='changesshrootpassword'
-SSH_USERNAME='sshin'
-SSH_USERPASS='changesshuserpassword'
-RUBY_BUILD='2.1.5'
-PASSENDER_BUILD='5.0.10'
-
 __create_ssh_user() {
 # Create a user to SSH into as.
 /usr/sbin/useradd $SSH_USERNAME

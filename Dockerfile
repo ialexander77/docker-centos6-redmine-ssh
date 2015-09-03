@@ -6,6 +6,18 @@ FROM centos:centos6
 
 MAINTAINER Alex Ivanov <ialexander77@gmail.com>
 
+ENV MYSQL_ROOT_PASSWORD='changerootpassword' \
+    MYSQL_APP_DB_PASSWORD='changeuserpassword' \
+    MYSQL_APP_DB_USERNAME='redmine_admin' \
+    MYSQL_APP_DB_NAME='redmine_db'
+
+ENV SSH_ROOTPASS='changesshrootpassword' \
+    SSH_USERNAME='sshin' \
+    SSH_USERPASS='changesshuserpassword'
+
+ENV RUBY_BUILD='2.1.5' \
+    PASSENDER_BUILD='5.0.10'
+
 # Update and install epel repo
 RUN yum -y update --nogpgcheck && yum -y install epel-release --nogpgcheck
 
